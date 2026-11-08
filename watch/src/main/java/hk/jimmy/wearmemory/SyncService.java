@@ -1,0 +1,2 @@
+package hk.jimmy.wearmemory;import com.google.android.gms.wearable.*;import java.io.*;
+public class SyncService extends WearableListenerService {public void onDataChanged(DataEventBuffer events){for(DataEvent e:events)if(e.getType()==DataEvent.TYPE_DELETED){String n=e.getDataItem().getUri().getLastPathSegment();if(n!=null&&n.matches("[0-9]+[.]pcm"))new File(Ui.dir(this,"audio"),n).delete();}}}

@@ -1,0 +1,27 @@
+name: Alpha bug report / 測試回報
+description: Report a reproducible issue without sharing private recordings.
+title: "[Alpha] "
+body:
+  - type: markdown
+    attributes:
+      value: "Do not attach private conversations, credentials or unredacted logs. 請勿上載私人錄音、密碼或未遮蓋的紀錄。"
+  - type: input
+    id: devices
+    attributes:
+      label: Phone and watch / 手機與手錶
+    validations:
+      required: true
+  - type: input
+    id: versions
+    attributes:
+      label: OS and app versions / 系統及 App 版本
+  - type: input
+    id: models
+    attributes:
+      label: Model filenames and RAM / 模型檔名及 RAM
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps, expected and actual behavior / 重現方法、預期與實際結果
+    validations:
+      required: true

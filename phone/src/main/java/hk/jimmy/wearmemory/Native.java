@@ -1,0 +1,1 @@
+package hk.jimmy.wearmemory;public class Native { static {System.loadLibrary("memoryasr");System.loadLibrary("memoryllm");}public static native void close();public static native String transcribe(String path,float[] audio);public static native String summarize(String model,String prompt);}
